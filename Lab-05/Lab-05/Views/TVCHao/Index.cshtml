@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Lab_05.Models.TVCSong>
+
+@{
+    ViewBag.Title = "TVCSong";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Them", "Create")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tvctitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tvcAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tvcArtist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tvcYearRelease)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tvctitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tvcAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tvcArtist)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tvcYearRelease)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
