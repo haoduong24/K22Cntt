@@ -18,7 +18,7 @@ export default function TvcUseEffect() {
     },[])
     // deps
     useEffect(()=>{
-        return <h4>useEffect count click: {count}</h4>
+        console.log(`useEffect count click:`, count)
     },[count])
   return (
     <div>

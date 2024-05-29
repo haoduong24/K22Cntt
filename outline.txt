@@ -1,0 +1,4 @@
+- hiển thị dữ liệu(Mock data cung cấp)
+- Thực hiện thêm mới dữ liệu
+-  Sửa đổi dữ liệu
+- Xóa dữ liệu
