@@ -2,7 +2,12 @@ import React from 'react'
 
 export default function tvcListTask({rendertvcLiskTasks}) {
   console.log(rendertvcLiskTasks);
-
+  // Ham xu ly du lieu khi edit
+  const tvcHandleEdit =(param)=>{
+    console.log("edit:",param);
+  //chuyen doi du lieu tren app
+  onTvcEdit(param);
+  }
   //render data
   let tvcElementTask  = rendertvcLiskTasks.map((task,index)=>{
     return(
@@ -13,7 +18,9 @@ export default function tvcListTask({rendertvcLiskTasks}) {
         <td>{task.tvc_taskName}</td>
         <td>{task.tvc_task_level}</td>
         <td>
-          <button className='btn btn-success'>Edit</button>
+          <button className='btn btn-success'
+                  onClick={()=>tvcHandleEdit(task)}
+          >Edit</button>
           <button className='btn btn-danger'>Remove</button>
         </td>
       </tr>
