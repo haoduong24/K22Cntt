@@ -3,13 +3,45 @@ import './App.css';
 import React, {useState} from 'react'
 
 function App() {
-  //Mock data
+  // Mock data
   const tvc_listTasks = [
-    { tvc_taskId:1, tvc_taskName:"Học lập trình frontend", tvc_level:"Small" },
-    { tvc_taskId:2, tvc_taskName:"Học lập trình reactjs",tvc_level:"Medium"},
-    { tvc_taskId:3, tvc_taskName:"Lập trình với Frontend - Reactjs",tvc_level:"High"},
-    { tvc_taskId:4, tvc_taskName:"Lập trình Fullstack (PHP, Java, NetCore)",tvc_level:"Small"},
-   ]
+    {
+      tvc_taskId: 2201234,
+      tvc_taskName: "Duong Hao",
+      tvc_level: "Small",
+    },
+    {
+      tvc_taskId: 1,
+      tvc_taskName: "Học lập trình CNTT",
+      tvc_level: "Small",
+    },
+    {
+      tvc_taskId: 2,
+      tvc_taskName: "Học lập trình reactjs",
+      tvc_level: "Medium",
+    },
+    {
+      tvc_taskId: 3,
+      tvc_taskName: "Lập trình với Hao",
+      tvc_level: "High",
+    },
+    {
+      tvc_taskId: 4,
+      tvc_taskName: "Lập trình Fullstack (PHP, Java, NetCore)",
+      tvc_level: "Small",
+    },
+  ];
+  let data =  JSON.parse(localStorage.getItem("TvcK22CNT1DataTasks"));
+  if(data === null || data.length === 0){
+    data= tvc_listTasks;
+    localStorage.setItem("TvcK22CNT1DataTasks",JSON.stringify(data))
+  }
+  // sử dụng hàm useState để lưu trữ trạng thái dữ liệu
+  const [tvcListTask, setTvcListTasks] = useState(data);
+ 
+  useEffect(()=>{
+    localStorage.setItem("TvcK22CNT1DataTasks",JSON.stringify(tvcListTasks))
+  },[tvcListTasks])
    // sử dụng hàm useState để lưu trữ trạng thái dữ liệu
    const[tvcListTasks,settvcListTasks]=useState(tvc_ListTasks); 
    const tvcHandleSubmit = (tvcParam) => {
