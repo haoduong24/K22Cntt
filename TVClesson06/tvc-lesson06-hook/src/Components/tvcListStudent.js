@@ -7,6 +7,8 @@ function App() {
     { tvcId: 1, tvcName: "Duong Hao", tvcAge: 20, tvcIsActive: true },
     { tvcId: 2, tvcName: "Nguyen Trung Quoc", tvcAge: 21, tvcIsActive: false },
     { tvcId: 3, tvcName: "Tran Van Huu Phuc", tvcAge: 22, tvcIsActive: true },
+    { tvcId: 4, tvcName: "Duong Nguyen Huu Phuc", tvcAge: 23, tvcIsActive: true }
+
   ];
 
   let data = JSON.parse(localStorage.getItem("TvcK22CNT1DataStudents"));
