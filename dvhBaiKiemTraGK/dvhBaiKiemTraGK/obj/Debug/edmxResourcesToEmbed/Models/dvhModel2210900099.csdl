@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dvhK22CNT1Lesson07DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="dvhKhoa">
+    <Key>
+      <PropertyRef Name="dvhMaKhoa" />
+    </Key>
+    <Property Name="dvhMaKhoa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="dvhTenKH" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="dvhTrangThai" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="dvhK22CNT1Lesson07DbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="dvhKhoa" EntityType="Self.dvhKhoa" />
+  </EntityContainer>
+</Schema>

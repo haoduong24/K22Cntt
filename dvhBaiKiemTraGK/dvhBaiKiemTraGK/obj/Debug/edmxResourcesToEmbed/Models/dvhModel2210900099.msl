@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dvhK22CNT1Lesson07DbModelStoreContainer" CdmEntityContainer="dvhK22CNT1Lesson07DbEntities1">
+    <EntitySetMapping Name="dvhKhoa">
+      <EntityTypeMapping TypeName="dvhK22CNT1Lesson07DbModel.dvhKhoa">
+        <MappingFragment StoreEntitySet="dvhKhoa">
+          <ScalarProperty Name="dvhMaKhoa" ColumnName="dvhMaKhoa" />
+          <ScalarProperty Name="dvhTenKH" ColumnName="dvhTenKH" />
+          <ScalarProperty Name="dvhTrangThai" ColumnName="dvhTrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

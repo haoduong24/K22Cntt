@@ -1,0 +1,39 @@
+﻿@model IEnumerable<dvhBaiKiemTraGK.Models.dvhKhoa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dvhTenKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dvhTrangThai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.dvhTenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dvhTrangThai)
+        </td>
+        <td>
+            @Html.ActionLink("DVH: Edit", "Edit", new { id=item.dvhMaKhoa }) |
+            @Html.ActionLink("DVH: Details", "Details", new { id=item.dvhMaKhoa }) |
+            @Html.ActionLink("DVH: Delete", "Delete", new { id=item.dvhMaKhoa })
+        </td>
+    </tr>
+}
+
+</table>
